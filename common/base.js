@@ -77,5 +77,5 @@ function navigateHome(){
 }
 
 function navigateToTripCard(){
-    window.location.href="/trip-card";
+    window.location.href="/health-code-index/trip-card";
 }
