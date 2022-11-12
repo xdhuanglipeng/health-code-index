@@ -18,14 +18,16 @@
         </view>
         <view class="weui-navigation-bar__right"></view>
     </view>
-    <div class="capsule" onclick="navigateHome()">
-        <svg class="capsule-menu-icon" viewBox="0 0 64 28" xmlns="http://www.w3.org/2000/svg">
+    <div class="capsule">
+        <svg class="capsule-menu-icon" viewBox="0 0 64 28" xmlns="http://www.w3.org/2000/svg"
+             onclick="requestFullScreen()">
             <circle cx="32" cy="14" r="9.5"/>
             <circle cx="54" cy="14" r="6"/>
             <circle cx="10" cy="14" r="6"/>
         </svg>
         <div class="splitter"></div>
-        <svg class="capsule-exit-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <svg class="capsule-exit-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"
+             onclick="exitFullscreen()">
             <circle cx="30" cy="30" r="9"/>
             <circle cx="30" cy="30" r="23" stroke-width="6" fill="transparent"/>
         </svg>
