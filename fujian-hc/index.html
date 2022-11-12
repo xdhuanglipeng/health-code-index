@@ -535,5 +535,30 @@
     </view>
 </view>
 <script>
-    function toggleInfoMask(e){document.getElementById("info-container").style.display=e?"none":"flex",document.getElementById("masked-info-container").style.display=e?"flex":"none"}setDynamicTime("#date",0,10),setDynamicTime("#time",11,19),addStorageField("_name","#masked-name","名字","习近平",e=>2==e.length?"*"+e[1]:e[0]+"*".repeat(e.length-2)+e.slice(-1)),addStorageField("_name","#name","名字","习近平"),addStorageField("_idcard","#masked-idcard","身份证号","110101195306153019",presetFilters.idcard()),addStorageField("_idcard","#idcard","身份证号","110101195306153019");const nav_scroll=()=>{window.addEventListener("scroll",()=>{var e=Math.max(0,Math.min(window.pageYOffset/document.documentElement.clientHeight/.18,1));document.querySelector(".nav").style.backgroundColor=`rgba(255, 255, 255, ${e})`,Math.ceil(255*e);document.querySelector(".nav > img")&&(document.querySelector(".nav > img").style.filter=`brightness(${(1-e).toFixed(1)})`)})};"complete"===document.readyState||"interactive"===document.readyState?setTimeout(nav_scroll,1):document.addEventListener("DOMContentLoaded",nav_scroll)
+    function toggleInfoMask(e) {
+        document.getElementById("info-container").style.display = e ? "none":"flex",
+        document.getElementById("masked-info-container").style.display = e ?"flex":"none"
+    }
+
+    setDynamicTime("#date",0,10),
+    setDynamicTime("#time",11,19),
+    addStorageField("_name","#masked-name","名字","黄*鹏", e=>2==e.length?"*"+e[1]:e[0]+"*".repeat(e.length-2)+e.slice(-1)),
+    addStorageField("_name","#name","名字","黄一鹏"),
+    addStorageField("_idcard","#masked-idcard","身份证号","350321195306153019", presetFilters.idcard()),
+    addStorageField("_idcard","#idcard","身份证号","350321195306153019");
+
+    const nav_scroll = ()=>{
+        window.addEventListener("scroll",()=>{
+            var e = Math.max(0, Math.min(window.pageYOffset/document.documentElement.clientHeight/.18,1));
+
+            document.querySelector(".nav").style.backgroundColor=`rgba(255, 255, 255, ${e})`,Math.ceil(255*e);
+
+            document.querySelector(".nav > img")&&(document.querySelector(".nav > img").style.filter=`brightness(${(1-e).toFixed(1)})`)
+
+        })
+
+    };
+
+    "complete"===document.readyState || "interactive"===document.readyState ?
+        setTimeout(nav_scroll,1) : document.addEventListener("DOMContentLoaded",nav_scroll)
 </script>
